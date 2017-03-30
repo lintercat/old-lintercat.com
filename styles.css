@@ -77,6 +77,13 @@ footer .org {
   color: #FF6B39;
 }
 
+@media only screen and (max-device-width: 768px) {
+  footer a {
+    font-size: 4rem;
+    display: block;
+    margin-top: 1rem;
+  }
+}
 
 @keyframes falling-asleep {
   0% {
@@ -91,4 +98,5 @@ footer .org {
   100% {
     transform: rotate(0deg);
   }
+
 }
