@@ -1,40 +1,17 @@
 
-// Load Foundation variables and mixins
-@import './assets/style/settings';
+// Load global styles
+@import '~assets/style/global';
+
+// Load font faces
+@import '~assets/style/font-faces';
+
+// Load custom configuration of Foundation Sites
 @import '~foundation-sites/scss/foundation';
 
+// Include foundation global styles
+// What does it do? Kind of normalizes the document
+// styles and adds some document font styles
 @include foundation-global-styles;
-@include foundation-grid;
+
+// Include typography foundation styles
 @include foundation-typography;
-@include foundation-button;
-@include foundation-forms;
-@include foundation-visibility-classes;
-@include foundation-float-classes;
-// @include foundation-accordion;
-// @include foundation-badge;
-// @include foundation-breadcrumbs;
-// @include foundation-button-group;
-// @include foundation-callout;
-// @include foundation-close-button;
-// @include foundation-drilldown-menu;
-// @include foundation-dropdown;
-// @include foundation-dropdown-menu;
-// @include foundation-flex-video;
-// @include foundation-joyride;
-// @include foundation-label;
-// @include foundation-media-object;
-// @include foundation-menu;
-// @include foundation-off-canvas;
-// @include foundation-orbit;
-// @include foundation-pagination;
-// @include foundation-progress-bar;
-// @include foundation-slider;
-// @include foundation-sticky;
-// @include foundation-reveal;
-// @include foundation-switch;
-// @include foundation-table;
-// @include foundation-tabs;
-// @include foundation-thumbnail;
-// @include foundation-title-bar;
-// @include foundation-tooltip;
-// @include foundation-top-bar;
