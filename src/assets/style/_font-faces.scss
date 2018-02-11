@@ -1,6 +1,13 @@
 
 @font-face {
   font-family: 'Caviar Dreams';
-  src: url('~assets/fonts/caviar-dreams/CaviarDreams.woff2') format('woff2'),
-    url('~assets/fonts/caviar-dreams/CaviarDreams.woff') format('woff');
+  font-weight: bold;
+  src: url('~assets/fonts/caviar-dreams/CaviarDreams-Bold.woff2') format('woff2'),
+    url('~assets/fonts/caviar-dreams/CaviarDreams-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Satisfy';
+  src: url('~assets/fonts/satisfy/Satisfy-Regular.woff2') format('woff2'),
+    url('~assets/fonts/satisfy/Satisfy-Regular.woff') format('woff');
 }

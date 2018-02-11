@@ -1,28 +1,18 @@
 
-// .hides-scrollbars {
-//   &::-webkit-scrollbar { 
-//     display: none; 
-//   }
-// }
+%edge-bleeded-left {
+  padding-left: ($base-spacing * 6);
+}
 
-// .fixed-overlay,
-// .overlay {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
+%edge-bleeded-right {
+  padding-right: ($base-spacing * 6);
+}
 
-// .absolute-overlay {
-//   @extend .overlay;
-//   position: absolute;
-// }
+%edge-bleeded {
+  @extend %edge-bleeded-left;
+  @extend %edge-bleeded-right;
+}
 
-// .gradient-background {
-//   background-image: radial-gradient(
-//     farthest-corner at center right,
-//     from-palette(cello) 15%,
-//     from-palette(big-stone) 80%
-//   );
-// }
+%header-separator {
+  width: 188px;
+  height: 3px;
+}

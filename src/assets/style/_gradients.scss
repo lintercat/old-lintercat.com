@@ -1,0 +1,11 @@
+
+%bluish-gradiented {
+  $start-gradient-color: hsl(207, 73%, 46%) 0%;
+  $end-gradient-color: hsl(184, 93%, 63%) 100%;
+
+  background-image: radial-gradient(
+    ellipse at top left,
+    $start-gradient-color,
+    $end-gradient-color
+  );
+}

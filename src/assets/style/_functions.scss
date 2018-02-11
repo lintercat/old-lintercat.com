@@ -7,3 +7,8 @@
     @error 'given $key is not available in the palette';
   }
 }
+
+@function mobile-vw($target) { 
+  $vw-context: ($context-mobile-canvas-width / 100);
+  @return ($target / $vw-context) * 1vw;
+}

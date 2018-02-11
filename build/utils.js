@@ -62,7 +62,7 @@ exports.cssLoaders = function (options) {
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     scss: generateLoaders('sass', {
-      data: '@import "~assets/style/settings";'
+      data: '@import "~assets/style/settings"; @import "~assets/style/unsemantic"; @import "~foundation-sites/scss/foundation";'
     }),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
