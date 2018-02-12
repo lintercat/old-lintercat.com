@@ -1,6 +1,10 @@
 <template>
   <div class="row align-center">
     <div class="small-11 medium-6 large-5 column footer-contact-form small-centered">
+      <span>{{ errors.all() }}</span>
+    </div>
+
+    <div class="small-11 medium-6 large-5 column footer-contact-form small-centered">
       <form id="leadForm" class="hide-me">
         <div class="row">
           <div class="small-12 column">
@@ -23,6 +27,7 @@
             <label for="leadEmail">Email</label>
             <input  type="email"
                     required=""
+                    v-validate="'required|email'"
                     id="leadEmail"
                     v-model="leadEmail"
                     tabindex="5">
