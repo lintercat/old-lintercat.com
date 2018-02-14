@@ -1,17 +1,11 @@
 
-// Load global styles
 @import '~assets/style/global';
-
-// Load font faces
 @import '~assets/style/font-faces';
 
-// Load custom configuration of Foundation Sites
+// Load Foundation
 @import '~foundation-sites/scss/foundation';
-
-// Include foundation global styles
-// What does it do? Kind of normalizes the document
-// styles and adds some document font styles
 @include foundation-global-styles;
-
-// Include typography foundation styles
+// ...and some foundation stuff
 @include foundation-typography;
+@include foundation-forms;
+@include foundation-button;

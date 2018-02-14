@@ -1,10 +1,18 @@
 
 %edge-bleeded-left {
-  padding-left: ($base-spacing * 6);
+  padding-left: ($base-spacing * 4);
+
+  @include breakpoint(medium) {
+    padding-left: ($base-spacing * 6);
+  }
 }
 
 %edge-bleeded-right {
-  padding-right: ($base-spacing * 6);
+  padding-right: ($base-spacing * 4);
+
+  @include breakpoint(medium) {
+    padding-right: ($base-spacing * 6);
+  }
 }
 
 %edge-bleeded {
