@@ -2,7 +2,7 @@
   .mission-content
     .mission-text
       p En Lintercat, creamos experiencias que transforman marcas, crecen negocios y mejoran la vida de las personas.
-      p Acompañanos en el camino de diseñar juntos la primera impresión que los clientes tendrán de tu empresa.
+      p Acompáñanos en el camino de diseñar juntos la primera impresión que los clientes tendrán de tu empresa.
     img.mission-image(src='~/assets/images/hands-up-decorated-picture@3x.png')
 </template>
 
