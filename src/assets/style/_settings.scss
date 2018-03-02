@@ -1,0 +1,80 @@
+
+////
+/// 0. Context
+////
+
+$context-mobile-canvas-width: 375px;
+
+////
+/// 1. Color palette
+////
+
+$palette: (
+  // Palette
+  white: hsl(0, 0%, 100%),
+  navy-blue: hsl(207, 73%, 46%),
+  turquoise-blue: hsl(184, 93%, 63%),
+  picton-blue: hsl(203, 61%, 58%),
+
+  // Text colors
+  bright-gray: hsl(0, 0%, 35%),
+  fuscous-gray: hsl(0, 0%, 23%)
+);
+
+@import 'functions';
+
+////
+/// 2. Foundation custom configuration
+////
+
+// 2.0 Import foundation default settings
+@import 'foundation-settings';
+
+// 2.1 Font
+$body-font-family: 'Source Sans Pro', Arial, sans-serif;
+$body-font-color: from-palette(bright-gray);
+$global-lineheight: 1.3;
+
+// 2.2 XY Grid
+$grid-margin-gutters: (small: 20px);
+$grid-container-padding: 0px;
+
+// 2.3 Global styles
+$body-background: from-palette(white);
+
+////
+/// 3. Spacing variables
+////
+
+$base-spacing: 5px;
+$site-left-padding: 70px;
+
+////
+/// 4. Import unsemantic styles
+////
+
+@import 'unsemantic';
+
+////
+/// 5. Forms
+////
+$form-label-color: from-palette(white);
+$input-padding: ($form-spacing / 4);
+$input-border: 0;
+$input-background-focus: $input-border;
+$input-shadow: none;
+$input-transition: none;
+$input-line-height: 1.8;
+$input-background: rgba(from-palette(white), 0.1);
+$input-background-focus: $input-background;
+$input-color: from-palette(white);
+$input-radius: ($global-radius / 3);
+$form-button-radius: $input-radius;
+
+////
+/// 6. Buttons
+////
+$button-background: from-palette(picton-blue);
+$button-background-hover: $button-background;
+$button-color: from-palette(white);
+$button-radius: ($global-radius / 3);
