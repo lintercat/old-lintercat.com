@@ -1,0 +1,26 @@
+
+%edge-bleeded-left {
+  padding-left: ($base-spacing * 4);
+
+  @include breakpoint(large) {
+    padding-left: ($base-spacing * 6);
+  }
+}
+
+%edge-bleeded-right {
+  padding-right: ($base-spacing * 4);
+
+  @include breakpoint(large) {
+    padding-right: ($base-spacing * 6);
+  }
+}
+
+%edge-bleeded {
+  @extend %edge-bleeded-left;
+  @extend %edge-bleeded-right;
+}
+
+%header-separator {
+  width: 188px;
+  height: 3px;
+}
