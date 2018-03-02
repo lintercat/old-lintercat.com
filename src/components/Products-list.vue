@@ -10,7 +10,14 @@
 
 <style lang='scss'>
 .products-list {
-  margin-bottom: 110px;
+  @include breakpoint(small) {
+    margin-bottom: 110px;
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: 250px;
+  }
+
   text-align: center;
 
   ul {
@@ -24,6 +31,11 @@
     @include breakpoint(small) {
       font-size: mobile-vw(28px);
       line-height: mobile-vw(42px);
+    }
+
+    @include breakpoint(large) {
+      font-size: 48px;
+      line-height: 72px;
     }
   }
 }

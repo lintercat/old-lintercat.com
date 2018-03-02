@@ -21,6 +21,12 @@
       width: 27vw;
       height: 27vw;
     }
+
+    @include breakpoint(large) {
+      bottom: 126px;
+      width: 145px;
+      height: 122px;
+    }
   }
 
   &.right {
@@ -32,6 +38,12 @@
       bottom: 14vw;
       width: 34vw;
       height: 34vw;
+    }
+
+    @include breakpoint(large) {
+      bottom: 124px;
+      width: 158px;
+      height: 119px;
     }
   }
 }

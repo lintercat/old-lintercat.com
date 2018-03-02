@@ -24,6 +24,10 @@
     @include breakpoint(small) {
       width: mobile-vw(174px);
     }
+
+    @include breakpoint(large) {
+      width: 390px;
+    }
   }
 
   .mission-text p {
@@ -31,14 +35,26 @@
       font-size: 0.875em;
       line-height: 1.285;
     }
+
+    @include breakpoint(large) {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+    }
   }
 
   .mission-image {
     float: right;
 
     @include breakpoint(small) {
-      width: mobile-vw(161px);
-      margin-top: mobile-vw(-30px);
+      width: mobile-vw(221px);
+      margin-top: mobile-vw(-15px);
+      margin-right: mobile-vw(-50px);
+    }
+
+    @include breakpoint(large) {
+      width: 454px;
+      margin-top: -100px;
+      margin-right: 0;
     }
   }
 }

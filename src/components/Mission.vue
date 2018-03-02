@@ -18,6 +18,17 @@ export default {
 
 <style lang='scss' scoped>
 .mission {
-  padding: mobile-vw(42px) 0;
+  overflow: hidden;
+
+  @include breakpoint(small) {
+    padding: mobile-vw(60px) 0;
+  }
+
+  @include breakpoint(large) {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 </style>

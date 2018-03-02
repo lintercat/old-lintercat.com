@@ -24,6 +24,13 @@ export default {
     padding: mobile-vw(26px) mobile-vw(36px);
   }
 
+  @include breakpoint(large) {
+    width: 720px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 60px 0;
+  }
+
   .footing-copyrights {
     display: inline-block;
 

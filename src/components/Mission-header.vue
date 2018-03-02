@@ -11,14 +11,27 @@
 .mission-header {
   @extend %edge-bleeded;
 
-  margin-bottom: mobile-vw(17px);
   font-family: 'Open Sans Condensed', $body-font-family;
   font-weight: bold;
   text-transform: uppercase;
   color: from-palette(fuscous-gray);
 
+  @include breakpoint(small) {
+    margin-bottom: mobile-vw(17px);
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: 33px;
+  }
+
   .mission-pretitle {
-    font-size: 0.875em;
+    @include breakpoint(small) {
+      font-size: 0.875em;
+    }
+
+    @include breakpoint(large) {
+      font-size: 1.125em;
+    }
   }
 
   .mission-header-separator {
@@ -28,7 +41,13 @@
   }
 
   .mission-title {
-    font-size: 1.125em;
+    @include breakpoint(small) {
+      font-size: 1.125em;
+    }
+
+    @include breakpoint(large) {
+      font-size: 1.75em;
+    }
   }
 }
 </style>

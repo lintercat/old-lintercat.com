@@ -15,6 +15,12 @@
     @include breakpoint(small) {
       font-size: 12vw;
     }
+
+    @include breakpoint(large) {
+      font-size: 4.5em;
+      letter-spacing: -1px;
+      line-height: 90px;
+    }
   }
 
   .sub-title {
@@ -25,6 +31,10 @@
 
     @include breakpoint(small) {
       font-size: 8vw;
+    }
+
+    @include breakpoint(large) {
+      font-size: 5.625em;
     }
   }
 }

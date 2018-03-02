@@ -23,8 +23,7 @@ export default {
 @import '~assets/style/gradients';
 
 .hero {
-  @extend %bluish-gradiented;
-
+  @include bluish-gradient;
   position: relative;
   text-align: center;
   color: from-palette(white);
@@ -35,7 +34,8 @@ export default {
     padding-bottom: 45vw;
   }
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
+    @include bluish-gradient-desktop;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 195px;

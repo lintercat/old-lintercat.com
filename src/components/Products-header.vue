@@ -13,6 +13,11 @@
     margin-bottom: mobile-vw(42px);
   }
 
+  @include breakpoint(large) {
+    padding-top: 123px;
+    margin-bottom: 94px;
+  }
+
   .products-title {
     font-family: 'Open Sans Condensed', $body-font-family;
     text-transform: uppercase;
@@ -21,6 +26,11 @@
     @include breakpoint(small) {
       font-size: mobile-vw(18px);
     }
+
+    @include breakpoint(large) {
+      font-size: 58px;
+      letter-spacing: -1px;
+    }
   }
 
   .products-subtitle {
@@ -28,6 +38,13 @@
 
     @include breakpoint(small) {
       padding: 0 mobile-vw(18px);
+    }
+
+    @include breakpoint(large) {
+      width: 720px;
+      padding: 0;
+      margin: 0 auto;
+      font-size: 32px;
     }
   }
 }
