@@ -55,14 +55,6 @@
     border-radius: $global-radius;
     box-shadow: 0 0 16px hsl(208, 50%, 47%);
 
-    &:hover {
-      box-shadow: 0 0 8px hsl(208, 50%, 47%);;
-    }
-
-    &:active {
-      box-shadow: none;
-    }
-
     @include breakpoint(small) {
       font-size: 3.5vw;
       padding: 2vw 5vw;
@@ -71,6 +63,14 @@
     @include breakpoint(small) {
       font-size: 0.875em;
       padding: 4px 11px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px hsl(208, 50%, 47%);;
+    }
+
+    &:active {
+      box-shadow: none;
     }
   }
 }
