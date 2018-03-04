@@ -2,6 +2,7 @@
   .top-bar
     .brand
       .logo
+      .name Lintercat
     a.contact-button(v-scroll-to="'.contact-header'") Contáctanos
 </template>
 
@@ -29,6 +30,7 @@
 
   .brand .logo {
     @include xy-cell(shrink);
+    display: inline-block;
 
     @include breakpoint(small) {
       width: 14vw;
@@ -44,6 +46,16 @@
     background-position: center;
     background-image: url(~assets/images/logo.svg);
     background-repeat: no-repeat;
+  }
+
+  .brand .name {
+    @include xy-cell(shrink);
+    @include show-for(large);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 56px;
+    vertical-align: top;
+    text-transform: uppercase;
   }
 
   .contact-button {
