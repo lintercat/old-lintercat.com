@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="131px" height="89px" viewBox="0 0 131 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.73120471">
+        <g id="Desktop-/-Home" transform="translate(-1241.000000, -247.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="hero" transform="translate(-37.000000, 0.000000)">
+                <g id="clouds-container" transform="translate(0.000000, 225.000000)">
+                    <g id="clouds-right" transform="translate(1278.000000, 0.000000)">
+                        <g id="first-cloud-right">
+                            <path d="M105.61875,55.403175 C101.907083,36.4777688 85.3683333,22.27 65.5,22.27 C49.7254167,22.27 36.025,31.266425 29.2020833,44.431925 C12.7725,46.187325 0,60.1756688 0,77.12625 C0,95.2836688 14.6829167,110.04 32.75,110.04 L103.708333,110.04 C118.773333,110.04 131,97.7522 131,82.611875 C131,68.129825 119.810417,56.3905875 105.61875,55.403175 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

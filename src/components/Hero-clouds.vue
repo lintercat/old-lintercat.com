@@ -1,6 +1,7 @@
 <template lang='pug'>
   .hero-clouds
     .cloud.left
+    .cloud.second-left
     .cloud.right
 </template>
 
@@ -27,6 +28,16 @@
       width: 145px;
       height: 122px;
     }
+  }
+
+  &.second-left {
+    @include show-for(large);
+    left: 120px;
+    background-image: url(~assets/images/cloud-second-left.svg);
+    background-position-x: left;
+    bottom: 236px;
+    width: 105px;
+    height: 92px;
   }
 
   &.right {
