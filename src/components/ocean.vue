@@ -1,22 +1,28 @@
 <template lang='pug'>
   .ocean
+    .habitat
     slot
 </template>
 
 <style lang='scss'>
 .ocean {
-  $start-gradient-color: hsl(198, 72%, 53%) 0%;
-  $mid-gradient-color: hsl(203, 62%, 49%) 15%;
-  $mid-end-gradient-color: hsl(213, 61%, 42%) 50%;
-  $end-gradient-color: hsl(214, 76%, 28%) 100%;
-
-  background-image: linear-gradient(
-    to bottom,
-    $start-gradient-color,
-    $mid-gradient-color,
-    $mid-end-gradient-color,
-    $end-gradient-color
-  );
+  position: relative;
+  background-image: url(~assets/images/bottom-background.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   color: from-palette(white);
+
+  .habitat {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    background-image: url(~assets/images/habitat.svg);
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
 }
 </style>

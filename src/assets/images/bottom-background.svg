@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1976px" viewBox="0 0 1440 1976" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>backgrounds</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#2F6DB6" offset="0%"></stop>
+            <stop stop-color="#10417D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-7.59033238%" x2="50%" y2="92.1143315%" id="linearGradient-2">
+            <stop stop-color="#31ABDE" offset="0%"></stop>
+            <stop stop-color="#2E6DB5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-/-Home" transform="translate(0.000000, -1132.000000)">
+            <g id="backgrounds" transform="translate(-104.000000, 1132.000000)">
+                <rect id="footer-background" fill="#11417E" x="100" y="1785" width="1449" height="192"></rect>
+                <rect id="contact-background" fill="url(#linearGradient-1)" x="56" y="992" width="1535" height="796"></rect>
+                <path d="M1587,60.2755312 L1587,995 L80,995 L80,60.7123728 C28.7027872,55.1923747 0,49.0175136 0,42.5 C0,19.0278981 372.275231,0 831.5,0 C1290.72477,0 1663,19.0278981 1663,42.5 C1663,48.8461174 1635.787,54.8673674 1587.0001,60.275522 Z" id="products-background" fill="url(#linearGradient-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
