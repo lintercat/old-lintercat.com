@@ -20,12 +20,13 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@import '~assets/style/gradients';
-
 .hero {
-  @include bluish-gradient;
   position: relative;
   text-align: center;
+  background-image: url(~assets/images/hero-background.svg);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   color: from-palette(white);
 
   @include breakpoint(small) {
@@ -35,7 +36,6 @@ export default {
   }
 
   @include breakpoint(large) {
-    @include bluish-gradient-desktop;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 195px;
