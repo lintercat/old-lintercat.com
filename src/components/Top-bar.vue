@@ -2,7 +2,7 @@
   .top-bar
     .brand
       .logo
-    .contact-button Contáctanos
+    a.contact-button(v-scroll-to="'.contact-header'") Contáctanos
 </template>
 
 <style lang='scss' scoped>
@@ -63,6 +63,14 @@
     @include breakpoint(small) {
       font-size: 0.875em;
       padding: 4px 11px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px hsl(208, 50%, 47%);;
+    }
+
+    &:active {
+      box-shadow: none;
     }
   }
 }
