@@ -15,7 +15,7 @@
   }
 
   @include breakpoint(large) {
-    margin-bottom: 250px;
+    margin-bottom: 300px;
   }
 
   text-align: center;
@@ -35,7 +35,7 @@
 
     @include breakpoint(large) {
       font-size: 48px;
-      line-height: 72px;
+      line-height: 92px;
     }
   }
 }
