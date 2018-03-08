@@ -5,6 +5,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VeeValidate from 'vee-validate'
 import VueScrollTo from 'vue-scrollto'
+import VueSweetalert2 from 'vue-sweetalert2'
 
 Vue.use(VueAxios, axios)
 Vue.use(VeeValidate)
@@ -12,6 +13,7 @@ Vue.use(VueScrollTo, {
   duration: 1500,
   easing: 'ease-out'
 })
+Vue.use(VueSweetalert2)
 
 Vue.config.productionTip = false
 

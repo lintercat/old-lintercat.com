@@ -13,7 +13,7 @@
       label(for='lead-name') ¿Cómo podemos ayudarte?
       textarea(v-model='lead.message' rows='3')
     .form-control
-      button(@click='submit') ¡Comencémos!
+      button(@click='submit' :class='{shake: hasError}') ¡Comencémos!
 </template>
 
 <script>
@@ -28,16 +28,30 @@ export default {
         email: '',
         message: '',
         createdAt: Date.now()
-      }
+      },
+      hasError: false
     }
   },
 
   methods: {
     submit () {
       const target = process.env.PROSPECTS_API_URL
-      axios.post(target, this.lead)
-        .then(response => { console.log(response) })
-        .catch(error => { console.error(error) })
+      const successMessage = `Gracias por contactarnos.\n
+                              Nos pondremos en contacto lo más pronto posible`
+      if (this.lead.name && this.lead.company && this.lead.email) {
+        axios.post(target, this.lead)
+          .then(response => {
+            this.$swal(successMessage)
+            console.log(response)
+          })
+          .catch(error => {
+            this.hasError = true
+            console.error(error)
+          })
+      } else {
+        this.hasError = true
+      }
+      setTimeout(() => { this.hasError = false }, 820)
     }
   }
 }
@@ -74,10 +88,35 @@ export default {
     width: 100%;
   }
 
+  .shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
   button {
     @include button($expand: true);
     margin-top: 15px;
     padding: 8px 0;
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
   }
 }
 </style>
