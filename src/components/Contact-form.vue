@@ -36,12 +36,14 @@ export default {
   methods: {
     submit () {
       const target = process.env.PROSPECTS_API_URL
-      const successMessage = `Gracias por contactarnos.\n
-                              Nos pondremos en contacto lo más pronto posible`
       if (this.lead.name && this.lead.company && this.lead.email) {
         axios.post(target, this.lead)
           .then(response => {
-            this.$swal(successMessage)
+            this.$swal({
+              title: 'Gracias por contactarnos',
+              text: 'Nos comunicaremos contigo lo más pronto posible',
+              type: 'success'
+            })
             console.log(response)
           })
           .catch(error => {
