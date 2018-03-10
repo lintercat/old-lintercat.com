@@ -62,19 +62,19 @@
     @include xy-cell(shrink);
 
     vertical-align: baseline;
-    background-color: from-palette(white);
-    color: from-palette(navy-blue);
+    border: 1px solid from-palette(white);
+    color: from-palette(white);
     border-radius: $global-radius;
-    box-shadow: 0 0 16px hsl(208, 50%, 47%);
+    text-transform: uppercase;
 
     @include breakpoint(small) {
       font-size: 3.5vw;
       padding: 2vw 5vw;
     }
 
-    @include breakpoint(small) {
+    @include breakpoint(large) {
       font-size: 0.875em;
-      padding: 4px 11px;
+      padding: 4px 20px;
     }
 
     &:hover {
