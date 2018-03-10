@@ -44,12 +44,8 @@ export default {
               text: 'Nos comunicaremos contigo lo más pronto posible',
               type: 'success'
             })
-            console.log(response)
           })
-          .catch(error => {
-            this.hasError = true
-            console.error(error)
-          })
+          .catch(() => { this.hasError = true })
       } else {
         this.hasError = true
       }
