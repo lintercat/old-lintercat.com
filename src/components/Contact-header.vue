@@ -7,6 +7,7 @@
 <style lang='scss'>
 .contact-header {
   text-align: center;
+  cursor: default;
 
   @include breakpoint(small) {
     margin-bottom: mobile-vw(42px);

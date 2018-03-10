@@ -15,7 +15,7 @@
   }
 
   @include breakpoint(large) {
-    margin-bottom: 250px;
+    margin-bottom: 300px;
   }
 
   text-align: center;
@@ -27,6 +27,7 @@
   li {
     display: block;
     font-weight: 600;
+    cursor: default;
 
     @include breakpoint(small) {
       font-size: mobile-vw(28px);
@@ -35,7 +36,7 @@
 
     @include breakpoint(large) {
       font-size: 48px;
-      line-height: 72px;
+      line-height: 92px;
     }
   }
 }
