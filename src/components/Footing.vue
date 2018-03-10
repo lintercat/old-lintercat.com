@@ -33,6 +33,7 @@ export default {
 
   .footing-copyrights {
     display: inline-block;
+    cursor: default;
 
     .footing-logo {
       display: inline-block;

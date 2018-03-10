@@ -56,6 +56,7 @@
     line-height: 56px;
     vertical-align: top;
     text-transform: uppercase;
+    cursor: default;
   }
 
   .contact-button {

@@ -7,6 +7,7 @@
 <style lang='scss'>
 .products-header {
   text-align: center;
+  cursor: default;
 
   @include breakpoint(small) {
     padding-top: mobile-vw(60px);

@@ -27,6 +27,7 @@
   li {
     display: block;
     font-weight: 600;
+    cursor: default;
 
     @include breakpoint(small) {
       font-size: mobile-vw(28px);

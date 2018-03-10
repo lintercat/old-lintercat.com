@@ -6,6 +6,12 @@
 
 <style lang='scss' scoped>
 .hero-text {
+
+  .title,
+  .sub-title {
+    cursor: default;
+  }
+
   .title {
     line-height: 1.125;
     font-family: 'Caviar Dreams', $body-font-family;
