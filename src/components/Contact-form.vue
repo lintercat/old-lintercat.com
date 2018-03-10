@@ -2,16 +2,16 @@
   .lead-form
     .long-text.form-entry
       label(for='lead-name') Nombre
-      input(type='text' v-model='lead.name')
+      input(type='text' v-model='lead.name' id='lead-name')
     .short-text.form-entry
-      label(for='lead-name') Empresa
-      input(type='text' v-model='lead.company')
+      label(for='lead-company') Empresa
+      input(type='text' v-model='lead.company' id='lead-company')
     .short-text.form-entry
-      label(for='lead-name') Email
-      input(type='text' v-model='lead.email')
+      label(for='lead-email') Email
+      input(type='text' v-model='lead.email' id='lead-email')
     .large-text.form-entry
-      label(for='lead-name') ¿Cómo podemos ayudarte?
-      textarea(v-model='lead.message' rows='3')
+      label(for='lead-message') ¿Cómo podemos ayudarte?
+      textarea(v-model='lead.message' rows='3' id='lead-message')
     .form-control
       button(@click='submit') ¡Comencémos!
 </template>

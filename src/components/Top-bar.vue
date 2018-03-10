@@ -1,9 +1,55 @@
 <template lang='pug'>
   .top-bar
-    .brand
-      .logo
-    a.contact-button(v-scroll-to="'.contact-header'") Contáctanos
+    motion(:values='brandStyles' :spring='spring')
+      template(slot-scope='_brandStyles')
+        .brand(:style='{ transform: `scale(${ _brandStyles.scale })`, opacity: _brandStyles.opacity }')
+          .logo
+          .name Lintercat
+    motion(:values='contactButtonStyles' :spring='spring')
+      template(slot-scope='_contactButtonStyles')
+        a.contact-button(
+          v-scroll-to="'.contact-header'"
+          :style='{ transform: `scale(${ _contactButtonStyles.scale })`, opacity: _contactButtonStyles.opacity }'
+        ) Contáctanos
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      spring: {
+        stiffness: 40,
+        damping: 5,
+        precision: 0.01
+      },
+      brandStyles: {
+        scale: 0.8,
+        opacity: 0
+      },
+      contactButtonStyles: {
+        scale: 1,
+        opacity: 0
+      }
+    }
+  },
+
+  mounted () {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        this.brandStyles = {
+          scale: 1,
+          opacity: 1
+        }
+
+        this.contactButtonStyles = {
+          scale: 1,
+          opacity: 1
+        }
+      }, 1900)
+    })
+  }
+}
+</script>
 
 <style lang='scss' scoped>
 .top-bar {
@@ -13,13 +59,12 @@
 
   @include breakpoint(small) {
     padding-top: 7vw;
-    margin-bottom: 16vw;// ($base-spacing * 19);
   }
 
   @include breakpoint(large) {
     padding-top: 33px;
     max-width: 930px;
-    margin: 0 auto 125px;
+    margin: 0 auto;
   }
 
   .brand,
@@ -29,6 +74,7 @@
 
   .brand .logo {
     @include xy-cell(shrink);
+    display: inline-block;
 
     @include breakpoint(small) {
       width: 14vw;
@@ -46,23 +92,34 @@
     background-repeat: no-repeat;
   }
 
+  .brand .name {
+    @include xy-cell(shrink);
+    @include show-for(large);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 56px;
+    vertical-align: top;
+    text-transform: uppercase;
+    cursor: default;
+  }
+
   .contact-button {
     @include xy-cell(shrink);
 
     vertical-align: baseline;
-    background-color: from-palette(white);
-    color: from-palette(navy-blue);
+    border: 1px solid from-palette(white);
+    color: from-palette(white);
     border-radius: $global-radius;
-    box-shadow: 0 0 16px hsl(208, 50%, 47%);
+    text-transform: uppercase;
 
     @include breakpoint(small) {
       font-size: 3.5vw;
       padding: 2vw 5vw;
     }
 
-    @include breakpoint(small) {
+    @include breakpoint(large) {
       font-size: 0.875em;
-      padding: 4px 11px;
+      padding: 4px 20px;
     }
 
     &:hover {

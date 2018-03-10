@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="535px" viewBox="0 0 1440 535" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>hero-background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="9.67618943%" y1="-50.2511651%" x2="76.2780068%" y2="163.089942%" id="linearGradient-1">
+            <stop stop-color="#1C77CA" offset="0%"></stop>
+            <stop stop-color="#52FEFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-/-Home" fill="url(#linearGradient-1)">
+            <g id="hero" transform="translate(-37.000000, 0.000000)">
+                <path d="M1496,460.48616 C1498.64467,462.791657 1500,465.131584 1500,467.5 C1500,469.868414 1498.64467,472.208337 1496.00001,474.513832 L1496,483 L1480.1323,483 C1402.30839,512.80833 1104.94943,535 750,535 C395.050572,535 97.6916136,512.80833 19.8676951,483 L4,483 L4,474.513838 C1.35532866,472.208337 0,469.868414 0,467.5 C0,465.131584 1.3553318,462.791657 4,460.48616 L4,0 L1496,0 L1496,460.48616 Z" id="hero-background"></path>
+            </g>
+        </g>
+    </g>
+</svg>
