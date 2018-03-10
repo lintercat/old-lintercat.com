@@ -13,7 +13,7 @@
       label(for='lead-message') ¿Cómo podemos ayudarte?
       textarea(v-model='lead.message' rows='3' id='lead-message')
     .form-control
-      button(@click='submit') ¡Comencémos!
+      button(@click='submit' :class='{shake: hasError}') ¡Comencémos!
 </template>
 
 <script>
@@ -28,16 +28,37 @@ export default {
         email: '',
         message: '',
         createdAt: Date.now()
-      }
+      },
+      hasError: false
     }
   },
 
   methods: {
     submit () {
       const target = process.env.PROSPECTS_API_URL
-      axios.post(target, this.lead)
-        .then(response => { console.log(response) })
-        .catch(error => { console.error(error) })
+      if (this.lead.name && this.lead.company && this.lead.email) {
+        axios.post(target, this.lead)
+          .then(response => {
+            this.$swal({
+              title: 'Gracias por contactarnos',
+              text: 'Nos comunicaremos contigo lo más pronto posible',
+              type: 'success'
+            }).then(() => { this.resetInputs() })
+          })
+          .catch(() => { this.hasError = true })
+      } else {
+        this.hasError = true
+      }
+      setTimeout(() => { this.hasError = false }, 820)
+    },
+    resetInputs () {
+      this.lead = {
+        name: '',
+        company: '',
+        email: '',
+        message: '',
+        createdAt: Date.now()
+      }
     }
   }
 }
@@ -72,6 +93,13 @@ export default {
   input,
   textarea {
     width: 100%;
+  }
+
+  .shake {
+    animation: shake-animation 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 
   button {
