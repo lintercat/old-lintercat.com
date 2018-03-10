@@ -1,10 +1,55 @@
 <template lang='pug'>
   .top-bar
-    .brand
-      .logo
-      .name Lintercat
-    a.contact-button(v-scroll-to="'.contact-header'") Contáctanos
+    motion(:values='brandStyles' :spring='spring')
+      template(slot-scope='_brandStyles')
+        .brand(:style='{ transform: `scale(${ _brandStyles.scale })`, opacity: _brandStyles.opacity }')
+          .logo
+          .name Lintercat
+    motion(:values='contactButtonStyles' :spring='spring')
+      template(slot-scope='_contactButtonStyles')
+        a.contact-button(
+          v-scroll-to="'.contact-header'"
+          :style='{ transform: `scale(${ _contactButtonStyles.scale })`, opacity: _contactButtonStyles.opacity }'
+        ) Contáctanos
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      spring: {
+        stiffness: 40,
+        damping: 5,
+        precision: 0.01
+      },
+      brandStyles: {
+        scale: 0.8,
+        opacity: 0
+      },
+      contactButtonStyles: {
+        scale: 1,
+        opacity: 0
+      }
+    }
+  },
+
+  mounted () {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        this.brandStyles = {
+          scale: 1,
+          opacity: 1
+        }
+
+        this.contactButtonStyles = {
+          scale: 1,
+          opacity: 1
+        }
+      }, 1900)
+    })
+  }
+}
+</script>
 
 <style lang='scss' scoped>
 .top-bar {
@@ -14,13 +59,12 @@
 
   @include breakpoint(small) {
     padding-top: 7vw;
-    margin-bottom: 16vw;// ($base-spacing * 19);
   }
 
   @include breakpoint(large) {
     padding-top: 33px;
     max-width: 930px;
-    margin: 0 auto 125px;
+    margin: 0 auto;
   }
 
   .brand,

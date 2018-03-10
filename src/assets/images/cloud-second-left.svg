@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="131px" height="89px" viewBox="0 0 131 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="166px" height="112px" viewBox="0 0 166 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
     <title>Shape</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.73120471">
-        <g id="Desktop-/-Home" transform="translate(-1241.000000, -247.000000)" fill="#FFFFFF" fill-rule="nonzero">
+        <g id="Desktop-/-Home" transform="translate(-1166.000000, -355.000000)" fill="#FFFFFF" fill-rule="nonzero">
             <g id="hero" transform="translate(-37.000000, 0.000000)">
                 <g id="clouds-container" transform="translate(0.000000, 225.000000)">
-                    <g id="clouds-right" transform="translate(1278.000000, 0.000000)">
-                        <g id="first-cloud-right">
-                            <path d="M105.61875,55.403175 C101.907083,36.4777688 85.3683333,22.27 65.5,22.27 C49.7254167,22.27 36.025,31.266425 29.2020833,44.431925 C12.7725,46.187325 0,60.1756688 0,77.12625 C0,95.2836688 14.6829167,110.04 32.75,110.04 L103.708333,110.04 C118.773333,110.04 131,97.7522 131,82.611875 C131,68.129825 119.810417,56.3905875 105.61875,55.403175 Z" id="Shape"></path>
+                    <g id="clouds-right" transform="translate(1203.000000, 0.000000)">
+                        <g id="second-cloud-right" transform="translate(186.000000, 144.500000) scale(-1, 1) translate(-186.000000, -144.500000) translate(0.000000, 47.000000)">
+                            <path d="M339.8375,124.941142 C335.134167,100.984695 314.176667,83 289,83 C269.010833,83 251.65,94.3879921 243.004167,111.053346 C222.185,113.275394 206,130.982333 206,152.438976 C206,175.423278 224.605833,194.102362 247.5,194.102362 L337.416667,194.102362 C356.506667,194.102362 372,178.548031 372,159.382874 C372,141.050984 357.820833,126.191043 339.8375,124.941142 Z" id="Shape"></path>
                         </g>
                     </g>
                 </g>

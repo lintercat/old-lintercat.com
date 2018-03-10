@@ -27,7 +27,7 @@ export default {
   @include breakpoint(large) {
     width: 960px;
     margin: 0 auto;
-    padding-top: 130px;
+    padding-top: 90px;
     padding-bottom: 170px;
   }
 }

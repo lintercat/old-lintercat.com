@@ -1,0 +1,34 @@
+
+@keyframes hero-height-entrance-animation {
+  from {
+    height: 100vh;
+  } to {
+    height: 550px;
+  }
+}
+
+@keyframes hero-cloud-left-entrance-animation {
+  from {
+    transform: translateX(-100%);
+  } to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-cloud-second-left-entrance-animation {
+  from {
+    left: 0;
+    transform: translateX(-100%);
+  } to {
+    left: 120px;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-cloud-right-entrance-animation {
+  from {
+    transform: translateX(100%);
+  } to {
+    transform: translateX(0);
+  }
+}

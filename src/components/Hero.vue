@@ -1,8 +1,10 @@
 <template lang='pug'>
-  .hero
-    top-bar
-    hero-text
-    hero-clouds
+  motion(:value='bullshit' :spring='spring')
+    template(slot-scope='props')
+      .hero(:style='{ height: props.value + "px" }')
+        top-bar
+        hero-text
+        hero-clouds
 </template>
 
 <script>
@@ -15,12 +17,33 @@ export default {
     TopBar,
     HeroText,
     HeroClouds
+  },
+
+  data () {
+    return {
+      spring: {
+        stiffness: 40,
+        damping: 5,
+        precision: 0.01
+      },
+      bullshit: window.innerHeight
+    }
+  },
+
+  mounted () {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        this.bullshit = window.innerHeight * 0.6
+      }, 1900)
+    })
   }
 }
 </script>
 
 <style lang='scss' scoped>
 .hero {
+  overflow: hidden;
+  box-sizing: content-box;
   position: relative;
   text-align: center;
   background-image: url(~assets/images/hero-background.svg);
@@ -32,13 +55,13 @@ export default {
   @include breakpoint(small) {
     padding-left: 10vw;
     padding-right: 10vw;
-    padding-bottom: 45vw;
+    padding-bottom: mobile-vw(50px);
   }
 
   @include breakpoint(large) {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 195px;
+    padding-bottom: 50px;
   }
 }
 </style>
