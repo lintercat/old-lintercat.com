@@ -19,6 +19,9 @@ export default {
 
 <style lang="scss">
 .footing {
+  position: relative;
+  z-index: 2;
+
   @include breakpoint(small) {
     margin-top: mobile-vw(80px);
     padding: mobile-vw(26px) mobile-vw(36px);

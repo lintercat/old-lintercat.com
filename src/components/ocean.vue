@@ -15,7 +15,7 @@
 
   .habitat {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     width: 80%;
     height: 80%;
     top: 10%;

@@ -15,3 +15,10 @@ export default {
   }
 }
 </script>
+
+<style lang='scss'>
+  .products {
+    position: relative;
+    z-index: 2;
+  }
+</style>
