@@ -1,11 +1,5 @@
 <template lang='pug'>
-  .hero {{ msg }}
+  .hero
+    .first.phrase We boost businesses
+    .second.phrase taking them to the cloud
 </template>
-
-<script>
-export default {
-  props: {
-    msg: String
-  }
-}
-</script>

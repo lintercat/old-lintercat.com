@@ -1,7 +1,12 @@
 
 describe('Hero', () => {
-  it('Shows welcome message', () => {
+  it('Shows main heading first phrase', () => {
     cy.visit('/')
-    cy.contains('we boost businesses')
+    cy.contains('We boost businesses')
+  })
+
+  it('Shows main heading first phrase', () => {
+    cy.visit('/')
+    cy.contains('taking them to the cloud')
   })
 })
