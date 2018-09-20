@@ -24,5 +24,8 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
+  },
+  "resolutions": {
+    "cypress": "3.0.3"
   }
 }
