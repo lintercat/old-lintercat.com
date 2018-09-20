@@ -6,12 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test": "vue-cli-service test:e2e"
   },
   "dependencies": {
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
     "vue": "^2.5.17",
+    "vue-i18n": "^8.1.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -21,6 +20,8 @@
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-standard": "^3.0.3",
     "node-sass": "^4.9.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
   }

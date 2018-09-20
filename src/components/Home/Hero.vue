@@ -1,5 +1,5 @@
 <template lang='pug'>
   .hero
-    .first.phrase We boost businesses
-    .second.phrase taking them to the cloud
+    .first.phrase {{ $t('hero.title') }}
+    .second.phrase {{ $t('hero.subtitle') }}
 </template>
