@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import Hero from '@/components/Home/Hero'
+import Hero from './components/Hero'
 
 export default {
   name: 'home',

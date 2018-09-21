@@ -1,0 +1,9 @@
+<svg width="1440" height="507" viewBox="0 0 1440 507" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="heroBackground" fill-rule="evenodd" clip-rule="evenodd" d="M1441 0H0V452.732V453H0.145996C33.4487 513.574 197.753 509.746 444.947 503.985C528.041 502.049 620.501 499.894 720.5 499.894C807.549 499.894 888.956 501.047 963.471 502.102C1229.15 505.863 1407.2 508.383 1440.84 453H1441V452.732V0Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="-1491.92" y1="-88.4714" x2="-1360.71" y2="1119.33" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00C2FF"/>
+<stop offset="1" stop-color="#0094FF"/>
+</linearGradient>
+</defs>
+</svg>

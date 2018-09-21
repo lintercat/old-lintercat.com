@@ -1,4 +1,8 @@
 <template lang='pug'>
-  #app
+  #lintercat
     router-view
 </template>
+
+<style lang='sass'>
+  @import 'sass/app'
+</style>
