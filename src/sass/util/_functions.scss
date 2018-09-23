@@ -1,0 +1,9 @@
+
+@function from-palette($key) {
+  @if map-has-key($palette, $key) {
+    @return map-get($palette, $key);
+  }
+  @else {
+    @error 'given $key is not available in the palette';
+  }
+}
