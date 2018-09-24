@@ -7,8 +7,6 @@
 import Hero from './Hero'
 
 export default {
-  name: 'home',
-
   components: {
     Hero
   }
