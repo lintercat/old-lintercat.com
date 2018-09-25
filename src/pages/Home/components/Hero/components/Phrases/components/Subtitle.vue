@@ -7,7 +7,7 @@
 
 <script>
 import { heroTextSpring as spring } from '@/config/motion'
-import ChangesAfterLoad from '@/pages/Home/components/Hero/mixins/ChangesAfterLoad'
+import ChangesAfterLoad from '@/mixins/ChangesAfterLoad'
 
 export default {
   mixins: [ChangesAfterLoad],

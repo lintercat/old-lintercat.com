@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import ChangesAfterLoad from '@/pages/Home/components/Hero/mixins/ChangesAfterLoad'
+import ChangesAfterLoad from '@/mixins/ChangesAfterLoad'
 
 export default {
   mixins: [ChangesAfterLoad],

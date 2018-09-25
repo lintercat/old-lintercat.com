@@ -12,7 +12,7 @@ import {
   heroBackgroundSpring as spring,
   heroChangeDelay as changeDelay
 } from '@/config/motion'
-import ChangesAfterLoad from './mixins/ChangesAfterLoad'
+import ChangesAfterLoad from '@/mixins/ChangesAfterLoad'
 import TopBar from './components/TopBar'
 import Clouds from './components/Clouds'
 import Phrases from './components/Phrases'
