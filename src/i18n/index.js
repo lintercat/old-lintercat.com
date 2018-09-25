@@ -5,7 +5,7 @@ import VueI18n from 'vue-i18n'
 import en from './en.json'
 import es from './es.json'
 
-export const locale = 'es'
+export const locale = 'en'
 export const messages = {
   en,
   es

@@ -1,11 +1,49 @@
 <template lang='pug'>
-  .clouds
+  .clouds(:class='{ animate }')
     .left.cloud
     .top.right.cloud
     .bottom.right.cloud
 </template>
 
-<style lang='sass'>
+<script>
+import ChangesAfterLoad from '@/pages/Home/components/Hero/mixins/ChangesAfterLoad'
+
+export default {
+  mixins: [ChangesAfterLoad],
+
+  data () {
+    return {
+      animate: false
+    }
+  },
+
+  methods: {
+    change () {
+      this.animate = true
+    }
+  }
+}
+</script>
+
+<style scoped lang='sass'>
+  @import 'sass/animations'
+
+  .clouds.animate
+    .cloud
+      animation-fill-mode: forwards
+      animation-timing-function: cubic-bezier(.01, .4, .33, .99)
+      animation-duration: 450ms
+      animation-delay: 2s
+
+    .left.cloud
+      animation-name: hero-cloud-left-entrance-animation
+
+    .top.right.cloud
+      animation-name: hero-cloud-top-right-entrance-animation
+
+    .bottom.right.cloud
+      animation-name: hero-cloud-bottom-right-entrance-animation
+
   .clouds
     position: absolute
     width: 100%
@@ -20,7 +58,11 @@
     background-position-y: center
     opacity: 0.7
 
+    &.left
+      transform: translateX(-100%)
+
     &.right
+      transform: translateX(100%)
       background-position: right center
 
     &.left
@@ -33,7 +75,7 @@
     &.top.right
       width: 131px
       height: 131px
-      right: 100px
+      right: 0
       bottom: 150px
       background-image: url('./images/cloudTopRight.svg')
 

@@ -48,6 +48,7 @@ export default {
 
 <style scoped lang='sass'>
   .hero
+    overflow: hidden
     box-sizing: content-box
     padding-bottom: 50px
     position: relative

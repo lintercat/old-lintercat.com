@@ -1,18 +1,16 @@
 
 const ChangesAfterLoad = {
-  data () {
-    return {
-      changeDelay: 0
-    }
-  },
-
   methods: {
     change () {}
   },
 
   mounted () {
     window.addEventListener('load', () => {
-      setTimeout(this.change, this.changeDelay)
+      if (this.changeDelay) {
+        setTimeout(this.change, this.changeDelay)
+      } else {
+        this.change()
+      }
     })
   }
 }
