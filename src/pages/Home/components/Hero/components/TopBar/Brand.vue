@@ -11,7 +11,7 @@ import {
   heroBackgroundSpring as spring,
   heroChangeDelay as changeDelay
 } from '@/config/motion'
-import ChangesAfterLoad from '@/pages/Home/Hero/mixins/ChangesAfterLoad'
+import ChangesAfterLoad from '@/pages/Home/components/Hero/mixins/ChangesAfterLoad'
 
 export default {
   mixins: [ChangesAfterLoad],

@@ -13,9 +13,9 @@ import {
   heroChangeDelay as changeDelay
 } from '@/config/motion'
 import ChangesAfterLoad from './mixins/ChangesAfterLoad'
-import TopBar from './TopBar'
-import Clouds from './Clouds'
-import Phrases from './Phrases'
+import TopBar from './components/TopBar'
+import Clouds from './components/Clouds'
+import Phrases from './components/Phrases'
 
 export default {
   mixins: [ChangesAfterLoad],
