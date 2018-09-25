@@ -1,5 +1,5 @@
 <template lang='pug'>
-  .clouds(:class='{ animate }')
+  .clouds(:class='{ animate }')
     .left.cloud
     .top.right.cloud
     .bottom.right.cloud
