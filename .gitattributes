@@ -1,4 +1,4 @@
 
 dist/* linguist-vendored
 build/* linguist-vendored
-src/assets/style/_foundation-settings.scss linguist-vendored
+src/sass/theme/_foundation-settings.scss linguist-vendored
