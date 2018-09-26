@@ -36,7 +36,6 @@ export default {
 
 <style lang='sass'>
   .second.phrase
-    padding-bottom: 150px
     letter-spacing: -1.1px
     font: 400 90px/1 'Satisfy', $header-font-family
 </style>

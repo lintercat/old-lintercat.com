@@ -39,7 +39,7 @@ export default {
   methods: {
     change () {
       this.styles = {
-        height: window.innerHeight * 0.6
+        height: window.innerHeight * 0.5
       }
     }
   }

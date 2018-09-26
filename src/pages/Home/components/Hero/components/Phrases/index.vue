@@ -19,7 +19,7 @@ export default {
 <style lang='sass'>
   .phrases
     position: absolute
-    top: 55%
+    top: 50%
     left: 50%
     width: 100%
     transform: translate(-50%, -50%)
