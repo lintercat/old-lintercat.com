@@ -1,9 +1,8 @@
 <template lang='pug'>
   .about
-    subheadline
-      | {{ $t('about.subheadline') }}
-    headline
-      | {{ $t('about.headline') }}
+    subheadline {{ $t('about.subheadline') }}
+    headline {{ $t('about.headline') }}
+    .text(v-html=`$t('about.text')`)
 </template>
 
 <script>
@@ -18,7 +17,16 @@ export default {
 }
 </script>
 
-<style lang='sass'>
+<style scoped lang='sass'>
   .about
     padding-top: 95px
+
+  .text
+    width: 780px
+    padding-top: 30px
+    margin: 0 auto
+    text-align: center
+    font: 400 24px/1.5 $body-font-family
+    letter-spacing: -0.25px
+    color: from-palette(rhino)
 </style>

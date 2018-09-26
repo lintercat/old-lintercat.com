@@ -8,6 +8,7 @@
   },
   "about": {
     "subheadline": "What we do",
-    "headline": "Stairways to the cloud"
+    "headline": "Stairways to the cloud",
+    "text": "We’re Lintercat, <span class='highlight'>two software engineers</span> that help companies design and develop better digital products, websites and services. We enjoy life building captivating user experiences, pixel-perfect user interfaces and beautiful code blocks."
   }
 }
