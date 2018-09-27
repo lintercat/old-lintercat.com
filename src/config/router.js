@@ -1,26 +1,36 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
+import i18n, {
+  locale as defaultLocale,
+  messages as i18nMessages
+} from '@/i18n'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
-    },
-
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ '@/pages/About')
+      component: Home,
+      children: [
+        { path: ':lang' }
+      ]
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  let language = to.params.lang
+  let isLanguageAvailable = i18nMessages.hasOwnProperty(language)
+  if (!language || !isLanguageAvailable) {
+    language = defaultLocale
+  }
+
+  i18n.locale = language
+  next()
+})
+
+export default router

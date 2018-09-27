@@ -5,5 +5,10 @@
     },
     "title": "Impulsamos negocios",
     "subtitle": "llevándolos a la nube"
+  },
+  "about": {
+    "subheadline": "Lo que hacemos",
+    "headline": "Escaleras hacia la nube",
+    "text": "Somos Lintercat, <span class='highlight'>dos ingenieros de software</span> que ayudan a empresas a diseñar y desarrollar mejores productos y servicios digitales. Disfrutamos la vida construyendo cautivadoras experiencias, interfaces pixel por pixel y hermosos bloques de código."
   }
 }
