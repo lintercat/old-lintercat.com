@@ -13,5 +13,9 @@ export const messages = {
 }
 
 Vue.use(VueI18n)
-const i18n = new VueI18n({ locale, fallbackLocale, messages })
+const i18n = new VueI18n({
+  locale,
+  fallbackLocale,
+  messages
+})
 export default i18n
