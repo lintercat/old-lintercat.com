@@ -13,7 +13,8 @@ export default {
 
   data () {
     return {
-      animate: false
+      animate: false,
+      changeDelay: 2000
     }
   },
 
@@ -33,7 +34,6 @@ export default {
       animation-fill-mode: forwards
       animation-timing-function: cubic-bezier(.01, .4, .33, .99)
       animation-duration: 450ms
-      animation-delay: 2s
 
     .left.cloud
       animation-name: hero-cloud-left-entrance-animation
