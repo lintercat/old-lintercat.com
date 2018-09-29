@@ -1,8 +1,8 @@
 <template lang='pug'>
   .how
     .content-wrapper
-      subheadline {{ $t('how.subheadline') }}
-      headline {{ $t('how.headline') }}
+      subheadline {{ $t('how.subheadline') }}
+      headline {{ $t('how.headline') }}
 </template>
 
 <script>
