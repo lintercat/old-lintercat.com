@@ -20,6 +20,7 @@ export default {
 <style scoped lang='sass'>
   .about
     padding-top: 95px
+    padding-bottom: 110px
 
   .text
     width: 780px
