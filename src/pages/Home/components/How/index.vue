@@ -34,8 +34,8 @@ export default {
       top: -135px
       left: 0
       background-image: url('./images/background.svg')
-      background-size: 100% auto
-      background-position: center bottom
+      background-size: 100% 100%
+      background-position: center bottom -1px
       background-repeat: no-repeat
 
   .content-wrapper
