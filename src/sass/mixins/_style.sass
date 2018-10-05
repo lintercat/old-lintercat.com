@@ -1,0 +1,16 @@
+@mixin top-curve-background ($image: './images/background.svg', $height: 135px, $color: transparent)
+  position: relative
+  background-color: $color
+
+  &::before
+    display: block
+    width: 100%
+    height: $height
+    content: ' '
+    position: absolute
+    top: -$height
+    left: 0
+    background-image: url($image)
+    background-size: 100% 100%
+    background-position: center bottom -1px
+    background-repeat: no-repeat
