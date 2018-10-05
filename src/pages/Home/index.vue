@@ -1,20 +1,23 @@
 <template lang='pug'>
   .home
-    hero
-    about
-    how
+    Hero
+    About
+    How
+    Subscribe
 </template>
 
 <script>
 import Hero from './components/Hero'
 import About from './components/About'
 import How from './components/How'
+import Subscribe from './components/Subscribe'
 
 export default {
   components: {
     Hero,
     About,
-    How
+    How,
+    Subscribe
   }
 }
 </script>
