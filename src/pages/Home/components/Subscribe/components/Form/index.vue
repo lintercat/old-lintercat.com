@@ -5,6 +5,11 @@
       v-show='shouldShowErrorLabel'
     ) Please enter a valid email
 
+    input.subscribe-form__name-input(
+      data-cy='name-input'
+      v-model='name'
+    )
+
     input.subscribe-form__email-input(
       data-cy='email-input'
       v-model='email'
@@ -32,7 +37,8 @@ export default {
 
   data () {
     return {
-      email: ''
+      email: '',
+      name: ''
     }
   },
 
@@ -52,7 +58,8 @@ export default {
 
   methods: {
     onSubmit () {
-      this.$emit('submit')
+      const { name, email } = this
+      this.$emit('submit', { name, email })
     }
   }
 }

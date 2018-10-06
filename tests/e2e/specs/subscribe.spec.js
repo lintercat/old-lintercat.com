@@ -5,16 +5,21 @@ describe('Subscribe form', () => {
   beforeEach(mountVue(SubscribeForm))
 
   beforeEach(() => {
+    cy.get('[data-cy="name-input"]').as('name-input')
     cy.get('[data-cy="email-input"]').as('email-input')
     cy.get('[data-cy="subscribe-button"]').as('subscribe-button')
     cy.get('[data-cy="error-label"]').as('error-label')
   })
 
-  it('renders the email input', () => {
+  it('shows the name input', () => {
+    cy.get('@name-input').should('be.visible')
+  })
+
+  it('shows the email input', () => {
     cy.get('@email-input').should('be.visible')
   })
 
-  it('renders the subscribe button', () => {
+  it('shows the subscribe button', () => {
     cy.get('@subscribe-button').should('be.visible')
   })
 
@@ -42,15 +47,17 @@ describe('Subscribe form', () => {
     cy.get('@subscribe-button').should('be.enabled')
   })
 
-  it('emmits a submit event with the email as payload when clicking the subscribe button', () => {
+  it('emits a "submit" event with the email as payload when clicking the subscribe button', () => {
     const spy = cy.spy()
     Cypress.vue.$on('submit', spy)
 
+    const name = 'Random name'
     const email = 'hola@lintercat.com'
+    cy.get('@name-input').type(name)
     cy.get('@email-input').type(email)
 
     cy.get('@subscribe-button').click().then(() => {
-      expect(spy).to.have.been.calledWith(email)
+      expect(spy).to.have.been.calledWith({ name, email })
     })
   })
 })
