@@ -8,7 +8,6 @@ describe('Subscribe form', () => {
     cy.get('[data-cy="name-input"]').as('name-input')
     cy.get('[data-cy="email-input"]').as('email-input')
     cy.get('[data-cy="subscribe-button"]').as('subscribe-button')
-    cy.get('[data-cy="error-label"]').as('error-label')
   })
 
   it('shows the name input', () => {
@@ -34,11 +33,6 @@ describe('Subscribe form', () => {
 
   it('disables the subscribe button when the email is invalid', () => {
     cy.get('@email-input').type('Invalid email')
-    cy.get('@subscribe-button').should('be.disabled')
-  })
-
-  it('shows an error message when the email is invalid', () => {
-    cy.get('@email-input').type('invalid email')
     cy.get('@subscribe-button').should('be.disabled')
   })
 

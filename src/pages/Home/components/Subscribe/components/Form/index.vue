@@ -1,66 +1,90 @@
 <template lang='pug'>
-  .subscribe-form(data-cy='title')
-    .subscribe-form__error-label(
-      data-cy='error-label'
-      v-show='shouldShowErrorLabel'
-    ) Please enter a valid email
+  .form
+    .name.group
+      label.label Name
+      input.name.input(
+        data-cy='name-input'
+        v-model='form.name'
+      )
 
-    input.subscribe-form__name-input(
-      data-cy='name-input'
-      v-model='name'
-    )
+    .email.group
+      label.label Email
+      input.email.input(
+        data-cy='email-input'
+        v-model='form.email'
+      )
 
-    input.subscribe-form__email-input(
-      data-cy='email-input'
-      v-model='email'
-    )
-
-    input.subscribe-form__submit-button(
-      data-cy='subscribe-button'
-      type='submit'
-      :value='buttonText'
-      :disabled='shouldDisableSubmitButton'
-      @click='onSubmit'
-    )
+    .controls.group
+      button.subcribe.button(
+        data-cy='subscribe-button'
+        :disabled='shouldDisableSubmitButton'
+        @click='onSubmit'
+      ) Start!
 </template>
 
 <script>
 import validateEmail from './validateEmail'
 
 export default {
-  props: {
-    buttonText: {
-      type: String,
-      default: 'Subscribe'
-    }
-  },
-
   data () {
     return {
-      email: '',
-      name: ''
+      form: {
+        email: '',
+        name: ''
+      }
     }
   },
 
   computed: {
     isValidEmail () {
-      return validateEmail(this.email)
-    },
-
-    shouldShowErrorLabel () {
-      return this.email.length > 3 && !this.isValidEmail
+      return validateEmail(this.form.email)
     },
 
     shouldDisableSubmitButton () {
-      return this.email.length < 4 || !this.isValidEmail
+      return this.form.email.length < 4 || !this.isValidEmail
     }
   },
 
   methods: {
     onSubmit () {
-      const { name, email } = this
-      this.$emit('submit', { name, email })
+      this.$emit('submit', this.form)
     }
   }
 }
 </script>
+
+<style scoped lang='sass'>
+  .group
+    @include xy-grid
+    @include flex-align ($x: center)
+    max-width: 380px
+    margin: 0 auto 10px
+
+  .label,
+  .button,
+  .input
+    font: 600 18px/1 $body-font-family
+    color: from-palette(white)
+
+  .label
+    @include xy-cell (full)
+    margin-bottom: 5px
+
+  .input
+    @include xy-cell (full)
+    padding: 6px 11px
+    font-weight: 400
+    border: none
+    border-radius: 3px
+    background-color: rgba(from-palette(white), 0.1)
+    outline-color: from-palette(true-blue)
+
+  .button
+    width: 100%
+    border: none
+    border-radius: 3px
+    margin-top: 25px
+    padding: 10px 0
+    background-color: from-palette(true-blue)
+    box-shadow: 0px 4px 2px rgba(from-palette(black), 0.05)
+</style>
