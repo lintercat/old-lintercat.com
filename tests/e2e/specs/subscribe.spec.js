@@ -42,7 +42,7 @@ describe('Subscribe form', () => {
     cy.get('@subscribe-button').should('be.enabled')
   })
 
-  it('emmits a submit event with the email as payload when clicking the subscribe button', async () => {
+  it('emmits a submit event with the email as payload when clicking the subscribe button', () => {
     const spy = cy.spy()
     Cypress.vue.$on('submit', spy)
 
