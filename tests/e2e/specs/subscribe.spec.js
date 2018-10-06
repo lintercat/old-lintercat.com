@@ -1,14 +1,13 @@
-describe('Subscribe form', () => {
-  beforeEach(() => {
-    cy.visit('/subscribe')
+import SubscribeForm from '@/pages/Home/components/Subscribe/components/Form'
+const mountVue = require('cypress-vue-unit-test')
 
+describe('Subscribe form', () => {
+  beforeEach(mountVue(SubscribeForm))
+
+  beforeEach(() => {
     cy.get('[data-cy="email-input"]').as('email-input')
     cy.get('[data-cy="subscribe-button"]').as('subscribe-button')
     cy.get('[data-cy="error-label"]').as('error-label')
-  })
-
-  it('Renders the email input', () => {
-    cy.get('@email-input').should('be.visible')
   })
 
   it('Renders the subscribe button', () => {
@@ -39,9 +38,15 @@ describe('Subscribe form', () => {
     cy.get('@subscribe-button').should('be.enabled')
   })
 
-  it('Shows success message after subscribing with a valid email', () => {
-    cy.get('@email-input').type('hola@lintercat.com')
-    cy.get('@subscribe-button').click()
-    cy.url().should('eq', Cypress.config().baseUrl + '/')
+  it('Emmits a submit event with the email as payload when clicking the Subscribe button', async () => {
+    const spy = cy.spy()
+    Cypress.vue.$on('submit', spy)
+
+    const email = 'hola@lintercat.com'
+    cy.get('@email-input').type(email)
+
+    cy.get('@subscribe-button').click().then(() => {
+      expect(spy).to.have.been.calledWith(email)
+    })
   })
 })

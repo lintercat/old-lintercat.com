@@ -1,14 +1,14 @@
 <template lang='pug'>
   .subscribe
-    SubscribeForm(@submit='onSubmit')
+    Form(@submit='onSubmit')
 </template>
 
 <script>
-import SubscribeForm from './components/SubscribeForm'
+import Form from './components/Form'
 
 export default {
   components: {
-    SubscribeForm
+    Form
   },
 
   methods: {

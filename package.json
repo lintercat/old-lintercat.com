@@ -6,14 +6,16 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "vue-cli-service test:e2e"
+    "test": "vue-cli-service test:e2e --mode development"
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^3.0.0",
     "@vue/cli-plugin-babel": "^3.0.1",
     "@vue/cli-plugin-e2e-cypress": "^3.0.1",
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-standard": "^3.0.3",
+    "cypress-vue-unit-test": "^1.11.0",
     "foundation-sites": "^6.5.0-rc.3",
     "node-sass": "^4.9.0",
     "pug": "^2.0.3",
