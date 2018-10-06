@@ -10,35 +10,35 @@ describe('Subscribe form', () => {
     cy.get('[data-cy="error-label"]').as('error-label')
   })
 
-  it('Renders the subscribe button', () => {
+  it('renders the subscribe button', () => {
     cy.get('@subscribe-button').should('be.visible')
   })
 
-  it('Disables subscribe button when first-loaded', () => {
+  it('disables the subscribe button when first-loaded', () => {
     cy.get('@subscribe-button').should('be.disabled')
   })
 
-  it('Disables button when email is less than 4 chars', () => {
+  it('disables the subscribe button when email has less than 4 chars', () => {
     cy.get('@email-input').type('aaa')
     cy.get('@subscribe-button').should('be.disabled')
   })
 
-  it('Disables button when the email is invalid', () => {
+  it('disables the subscribe button when the email is invalid', () => {
     cy.get('@email-input').type('Invalid email')
     cy.get('@subscribe-button').should('be.disabled')
   })
 
-  it('Shows an error message when the email is invalid', () => {
+  it('shows an error message when the email is invalid', () => {
     cy.get('@email-input').type('invalid email')
     cy.get('@subscribe-button').should('be.disabled')
   })
 
-  it('Enables subscribe button when email is valid and longer than 4 chars', () => {
+  it('enables the subscribe button when email is valid and has at least 4 chars', () => {
     cy.get('@email-input').type('hola@lintercat.com')
     cy.get('@subscribe-button').should('be.enabled')
   })
 
-  it('Emmits a submit event with the email as payload when clicking the Subscribe button', async () => {
+  it('emmits a submit event with the email as payload when clicking the subscribe button', async () => {
     const spy = cy.spy()
     Cypress.vue.$on('submit', spy)
 
