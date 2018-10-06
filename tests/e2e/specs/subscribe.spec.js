@@ -10,6 +10,10 @@ describe('Subscribe form', () => {
     cy.get('[data-cy="error-label"]').as('error-label')
   })
 
+  it('renders the email input', () => {
+    cy.get('@email-input').should('be.visible')
+  })
+
   it('renders the subscribe button', () => {
     cy.get('@subscribe-button').should('be.visible')
   })
