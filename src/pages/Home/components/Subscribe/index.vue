@@ -12,8 +12,8 @@ export default {
   },
 
   methods: {
-    onSubmit () {
-      this.$router.push({ name: 'root' })
+    onSubmit ({ name, email }) {
+      console.log(name, email)
     }
   }
 }
@@ -25,8 +25,4 @@ export default {
     width: 100%
     height: 50vh
     margin-top: -135px
-
-  .subscribe-form
-    &__error-label
-      color: red
 </style>
