@@ -1,13 +1,21 @@
 <template lang='pug'>
   .subscribe
-    Form(@submit='onSubmit')
+    .content-wrapper
+      subheadline(theme='light') {{ $t('contact.subheadline') }}
+      headline(theme='light') {{ $t('contact.headline') }}
+      Form(@submit='onSubmit')
+    .decorators
 </template>
 
 <script>
+import headline from '@/global/components/headline'
+import subheadline from '@/global/components/subheadline'
 import Form from './components/Form'
 
 export default {
   components: {
+    headline,
+    subheadline,
     Form
   },
 
@@ -23,6 +31,20 @@ export default {
   .subscribe
     @include top-curve-background ($color: from-palette(dodger-blue))
     width: 100%
-    height: 50vh
     margin-top: -135px
+
+  .content-wrapper
+    transform: translateY(-40px)
+
+  .decorators
+    position: absolute
+    width: 80%
+    height: 80%
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-image: url('./images/decorators.svg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
 </style>

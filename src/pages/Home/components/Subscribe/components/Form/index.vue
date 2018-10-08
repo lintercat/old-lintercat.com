@@ -54,6 +54,9 @@ export default {
 </script>
 
 <style scoped lang='sass'>
+  .form
+    padding: 180px 0
+
   .group
     @include xy-grid
     @include flex-align ($x: center)
