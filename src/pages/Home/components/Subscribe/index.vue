@@ -1,10 +1,10 @@
 <template lang='pug'>
   .subscribe
+    .decorators
     .content-wrapper
       subheadline(theme='light') {{ $t('contact.subheadline') }}
       headline(theme='light') {{ $t('contact.headline') }}
       Form(@submit='onSubmit')
-    .decorators
 </template>
 
 <script>
