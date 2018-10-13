@@ -29,8 +29,8 @@ export default {
   data () {
     return {
       form: {
-        email: '',
-        name: ''
+        name: '',
+        email: ''
       }
     }
   },
@@ -48,6 +48,8 @@ export default {
   methods: {
     onSubmit () {
       this.$emit('submit', this.form)
+      this.name = ''
+      this.email = ''
     }
   }
 }

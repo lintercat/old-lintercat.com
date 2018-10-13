@@ -1,10 +1,14 @@
 <template lang='pug'>
-  .subscribe
+  .subscribe(:class='{ success }')
     .decorators
     .content-wrapper
-      subheadline(theme='light') {{ $t('contact.subheadline') }}
-      headline(theme='light') {{ $t('contact.headline') }}
-      Form(@submit='subscribe')
+      .success-message
+        subheadline(theme='light') {{ $t('contact.success.subheadline') }}
+        headline(theme='light') {{ $t('contact.success.headline') }}
+      .form-wrapper
+        subheadline(theme='light') {{ $t('contact.form.subheadline') }}
+        headline(theme='light') {{ $t('contact.form.headline') }}
+        Form(@submit='subscribe')
 </template>
 
 <script>
@@ -20,10 +24,19 @@ export default {
     Form
   },
 
+  data () {
+    return {
+      success: false
+    }
+  },
+
   methods: {
     subscribe (lead) {
-      if (addLead(lead)) alert('Your message was sent successfully')
-      else alert('Sorry, we could not send your message')
+      if (addLead(lead)) {
+        this.success = true
+      } else {
+        alert('Sorry, we could not send your message')
+      }
     }
   }
 }
@@ -49,4 +62,25 @@ export default {
     background-repeat: no-repeat
     background-position: center center
     background-size: contain
+
+  .form-wrapper
+    position: relative
+
+  .success-message
+    opacity: 0
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    transform: translate(-50%, -60%)
+    padding: 50px 0
+    transition: transform 0.5s, opacity 1s
+
+  .subscribe.success
+    .success-message
+      transform: translate(-50%, -50%)
+      opacity: 1
+
+    .form-wrapper
+      visibility: hidden
 </style>

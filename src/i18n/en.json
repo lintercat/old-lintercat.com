@@ -16,7 +16,13 @@
     "headline": "The power of three"
   },
   "contact": {
-    "subheadline": "What's about to start",
-    "headline": "Let's go for a coffee ☕️"
+    "form": {
+      "subheadline": "What's about to start",
+      "headline": "Let's go for a coffee ☕️"
+    },
+    "success": {
+      "subheadline": "Your message was sent successfully 🚀",
+      "headline": "We’ll contact you very soon!"
+    }
   }
 }

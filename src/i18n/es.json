@@ -16,7 +16,13 @@
     "headline": "El poder de tres"
   },
   "contact": {
-    "subheadline": "Lo que está por comenzar",
-    "headline": "¿Vamos por un café? ☕️"
+    "form": {
+      "subheadline": "Lo que está por comenzar",
+      "headline": "¿Vamos por un café? ☕️"
+    },
+    "success": {
+      "subheadline": "Tu mensaje se envió exitosamente 🚀",
+      "headline": "¡Nos pondremos en contacto!"
+    }
   }
 }
