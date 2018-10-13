@@ -18,7 +18,10 @@
   "contact": {
     "form": {
       "subheadline": "Lo que está por comenzar",
-      "headline": "¿Vamos por un café? ☕️"
+      "headline": "¿Vamos por un café? ☕️",
+      "nameLabel": "Nombre",
+      "emailLabel": "Correo electrónico",
+      "subscribeButton": "¡Comenzar!"
     },
     "success": {
       "subheadline": "Tu mensaje se envió exitosamente 🚀",

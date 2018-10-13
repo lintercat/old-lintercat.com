@@ -1,14 +1,14 @@
 <template lang='pug'>
   .form
     .name.group
-      label.label Name
+      label.label {{ $t('contact.form.nameLabel') }}
       input.name.input(
         data-cy='name-input'
         v-model='form.name'
       )
 
     .email.group
-      label.label Email
+      label.label {{ $t('contact.form.emailLabel') }}
       input.email.input(
         data-cy='email-input'
         v-model='form.email'
@@ -19,7 +19,7 @@
         data-cy='subscribe-button'
         :disabled='shouldDisableSubmitButton'
         @click='onSubmit'
-      ) Start!
+      ) {{ $t('contact.form.subscribeButton') }}
 </template>
 
 <script>
