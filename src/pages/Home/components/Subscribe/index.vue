@@ -4,13 +4,14 @@
     .content-wrapper
       subheadline(theme='light') {{ $t('contact.subheadline') }}
       headline(theme='light') {{ $t('contact.headline') }}
-      Form(@submit='onSubmit')
+      Form(@submit='subscribe')
 </template>
 
 <script>
 import headline from '@/global/components/headline'
 import subheadline from '@/global/components/subheadline'
 import Form from './components/Form'
+import addLead from './functions/addLead'
 
 export default {
   components: {
@@ -20,8 +21,9 @@ export default {
   },
 
   methods: {
-    onSubmit ({ name, email }) {
-      console.log(name, email)
+    subscribe (lead) {
+      if (addLead(lead)) alert('Your message was sent successfully')
+      else alert('Sorry, we could not send your message')
     }
   }
 }
