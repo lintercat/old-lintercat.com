@@ -92,4 +92,9 @@ export default {
     padding: 10px 0
     background-color: from-palette(true-blue)
     box-shadow: 0px 4px 2px rgba(from-palette(black), 0.05)
+    opacity: 1
+    transition: opacity 0.3s
+
+    &:disabled
+      opacity: 0.3
 </style>
